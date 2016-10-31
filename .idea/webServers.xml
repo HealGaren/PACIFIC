@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b7fc5795-7702-4f8e-96a2-a0c5d4de1c18" name="ApplePi" url="http://applepi.kr">
+        <fileTransfer host="applepi.kr" port="22" rootFolder="/home/azureuser/yechan/2016dicon/webgame" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="7be115f3-c349-44c2-bc63-6c5e5c038af1" name="ApplePi_root" url="http://applepi.kr">
+        <fileTransfer host="applepi.kr" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

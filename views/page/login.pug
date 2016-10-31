@@ -1,0 +1,35 @@
+extends ../parent/layout
+
+mixin center
+    div.center-outer
+        div.center-inner
+            if block
+                block
+
+
+block head-more
+    link(rel='stylesheet', type='text/css', href='/stylesheets/page/login.css')
+
+block content
+    div#html-wrap
+        img#title(src='/images/login/title.png')
+
+        div#login-wrap
+            form#login-form
+                div.input-round
+                    +center
+                        input(type="email" name="email" placeholder="E-mail" autocomplete="off" required)
+                div.input-round
+                    +center
+                        input(type="password" name="password" placeholder="Pw" autocomplete="off" required)
+                img#login-button.btn(src="/images/login/login_button.png")
+
+            div.divider
+                div
+                span or
+                div
+            div#else-buttons
+                a(href="/login/signup")
+                    img#signup-btn.btn(src="/images/login/signup_bar.png")
+                a(href="/login/facebook")
+                    img#facebook-btn.btn(src="/images/login/facebook_bar.png")

@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+@import url('https://fonts.googleapis.com/css?family=Exo:600');
+
+body {
+  background: url("../../images/login/background.png") no-repeat;
+  background-size: 100% auto;
+}
+
+.placeholder(@rules) {
+  &::-webkit-input-placeholder {
+    @rules();
+  }
+
+  &:-moz-placeholder {
+    @rules();
+  }
+
+  &::-moz-placeholder {
+    @rules();
+  }
+
+  &:-ms-input-placeholder {
+    @rules();
+  }
+}
+
+@input-height: 45px;
+
+#html-wrap {
+  width: 900px;
+  margin: auto;
+  text-align: center;
+
+  color: white;
+
+  #title {
+    margin-top: 120px;
+    width:100%;
+  }
+  #login-wrap {
+
+    margin-top: 80px;
+
+    #login-form {
+
+      margin: auto;
+      width: 50%;
+
+      .input-round {
+        border: 2px solid black;
+        border-radius: @input-height / 2;
+        height: @input-height;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.7);
+
+        margin: 10px auto auto;
+
+        &:nth-child(1) {
+          margin-top: 0;
+        }
+
+        input {
+          font-family: Roboto, sans-serif;
+          width: 93%;
+          background: transparent;
+          border: none;
+          font-size: 20px;
+          &:focus {
+            outline: none;
+          }
+          .placeholder({ color: rgba(0, 0, 0, 0.6) });
+        }
+
+      }
+
+      #login-button {
+
+        margin-top: 30px;
+        float: right;
+        cursor: pointer;
+      }
+
+      &:after {
+        content:"";
+        display:block;
+        clear: both;
+      }
+    }
+    .divider {
+      width: 100%;
+      text-align: center;
+      font-family: Exo, sans-serif;
+      font-size:30px;
+
+      div {
+        display:inline-block;
+        width:45%;
+        height:22px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+        &:nth-of-type(1){
+          float:left;
+        }
+        &:nth-of-type(2){
+          float:right;
+        }
+      }
+    }
+
+    #else-buttons{
+      img {
+        display:block;
+        width:40%;
+        margin: 15px auto auto;
+        cursor:pointer;
+
+      }
+    }
+  }
+}

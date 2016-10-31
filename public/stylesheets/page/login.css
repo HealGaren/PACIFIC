@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+@import url('https://fonts.googleapis.com/css?family=Exo:600');
+body {
+  background: url("../../images/login/background.png") no-repeat;
+  background-size: 100% auto;
+}
+#html-wrap {
+  width: 900px;
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+#html-wrap #title {
+  margin-top: 120px;
+  width: 100%;
+}
+#html-wrap #login-wrap {
+  margin-top: 80px;
+}
+#html-wrap #login-wrap #login-form {
+  margin: auto;
+  width: 50%;
+}
+#html-wrap #login-wrap #login-form .input-round {
+  border: 2px solid black;
+  border-radius: 22.5px;
+  height: 45px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 10px auto auto;
+}
+#html-wrap #login-wrap #login-form .input-round:nth-child(1) {
+  margin-top: 0;
+}
+#html-wrap #login-wrap #login-form .input-round input {
+  font-family: Roboto, sans-serif;
+  width: 93%;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+}
+#html-wrap #login-wrap #login-form .input-round input:focus {
+  outline: none;
+}
+#html-wrap #login-wrap #login-form .input-round input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+#html-wrap #login-wrap #login-form .input-round input:-moz-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+#html-wrap #login-wrap #login-form .input-round input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+#html-wrap #login-wrap #login-form .input-round input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+#html-wrap #login-wrap #login-form #login-button {
+  margin-top: 30px;
+  float: right;
+  cursor: pointer;
+}
+#html-wrap #login-wrap #login-form:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#html-wrap #login-wrap .divider {
+  width: 100%;
+  text-align: center;
+  font-family: Exo, sans-serif;
+  font-size: 30px;
+}
+#html-wrap #login-wrap .divider div {
+  display: inline-block;
+  width: 45%;
+  height: 22px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+}
+#html-wrap #login-wrap .divider div:nth-of-type(1) {
+  float: left;
+}
+#html-wrap #login-wrap .divider div:nth-of-type(2) {
+  float: right;
+}
+#html-wrap #login-wrap #else-buttons img {
+  display: block;
+  width: 40%;
+  margin: 15px auto auto;
+  cursor: pointer;
+}
