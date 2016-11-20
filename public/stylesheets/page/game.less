@@ -411,7 +411,6 @@ html, body{
               position:absolute;
               bottom:15px;
               left:0;
-              background-size:60%;
               background-position: 0 0;
             }
 
@@ -419,55 +418,66 @@ html, body{
 
             .crap {
               @my-width:120px * @unit-scale;
+              @my-height:105px * @unit-scale;
               width:@my-width;
-              height:105px * @unit-scale;
-              background:url('../../images/game/unit/crap.png');
+              height:@my-height;
+              background-size: @my-width*3 @my-height*4;
+              background-image:url('../../images/game/unit/crap.png');
             }
 
             .crawfish {
               @my-width:96px * @unit-scale;
+              @my-height:150px * @unit-scale;
               width:@my-width;
-              height:150px * @unit-scale;
-              background:url('../../images/game/unit/crawfish.png');
+              height:@my-height;
+              background-size: @my-width*3 @my-height*4;
+              background-image:url('../../images/game/unit/crawfish.png');
             }
 
             .fugu {
               @my-width:110px * @unit-scale;
+              @my-height:110px * @unit-scale;
               width:@my-width;
-              height:110px * @unit-scale;
-              background:url('../../images/game/unit/fugu.png');
+              height:@my-height;
+              background-size: @my-width*3 @my-height*4;
+              background-image:url('../../images/game/unit/fugu.png');
             }
 
             .octopus {
               @my-width:104px * @unit-scale;
-              width: @my-width;
-              height:170px * @unit-scale;
+              @my-height:170px * @unit-scale;
+              width:@my-width;
+              height:@my-height;
+              background-size: @my-width*3 @my-height*4;
+              background-image:url('../../images/game/unit/octopus.png');
             }
 
             .jellyfish {
               @my-width:114px * @unit-scale;
+              @my-height:137px * @unit-scale;
               width:@my-width;
-              height:137px * @unit-scale;
-              background:url('../../images/game/unit/octopus.png');
+              height:@my-height;
+              background-size: @my-width*3 @my-height*4;
+              background-image:url('../../images/game/unit/jellyfish.png');
             }
 
             .shrimp {
               @my-width:93px * @unit-scale;
+              @my-height:132px * @unit-scale;
               width:@my-width;
-              height:132px * @unit-scale;
-              background:url('../../images/game/unit/shrimp.png');
+              height:@my-height;
+              background-size: @my-width*3 @my-height*4;
+              background-image:url('../../images/game/unit/shrimp.png');
             }
 
             .whale {
               @whale-scale:0.7;
-              background-size:70%;
-
-
               @my-width:170px * @unit-scale * @whale-scale;
+              @my-height:214px * @unit-scale * @whale-scale;
               width:@my-width;
-              height:214px * @unit-scale * @whale-scale;
-
-              background:url('../../images/game/unit/whale.png');
+              height:@my-height;
+              background-size: @my-width*3 @my-height*4;
+              background-image:url('../../images/game/unit/whale.png');
             }
 
 

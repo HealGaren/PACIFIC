@@ -20,6 +20,14 @@ $(window).ready(()=>{
         });
     });
 
+    var isFriendShowing = false;
+
+    $('#friend-icon').click(function(){
+        $('#friend-list-wrap').removeClass().addClass(`animated ${isFriendShowing?'fadeOutLeft':'fadeInLeft'}`).show();
+        isFriendShowing = !isFriendShowing;
+        $('.nano').nanoScroller();
+    });
+
     var $matchingBar = $('#matching-bar');
     var $matchingBarSpan = $matchingBar.find('span');
 
@@ -44,6 +52,7 @@ $(window).ready(()=>{
         $matchingBarSpan.text('매칭하기');
 
         $matchingBar.click(function(){
+            $matchingBar.off('click');
             $matchingBarSpan.text('매칭 중입니다...');
             socket.emit('match', onMatchReady)
         });

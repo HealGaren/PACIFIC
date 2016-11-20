@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="b7fc5795-7702-4f8e-96a2-a0c5d4de1c18" name="ApplePi" url="http://applepi.kr">
-        <fileTransfer host="applepi.kr" port="22" rootFolder="/home/azureuser/yechan/2016dicon/webgame" accessType="SFTP">
+        <fileTransfer host="applepi.kr" port="22" rootFolder="/home/azureuser/yechan/2016dicon/PACIFIC" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>

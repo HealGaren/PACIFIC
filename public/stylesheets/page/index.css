@@ -72,9 +72,14 @@ body {
   margin: 30px auto 0;
 }
 #html-wrap #left-menu #friend-list-wrap #friend-list {
-  width: 90%;
+  height: calc(100% - );
+}
+#html-wrap #left-menu #friend-list-wrap #friend-list .nano-content {
   margin: auto;
-  height: 90%;
+  width: 90%;
+}
+#html-wrap #left-menu #friend-list-wrap #friend-list .nano-content div {
+  height: 400px;
 }
 #html-wrap #left-menu #friend-icon {
   bottom: 0;

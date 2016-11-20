@@ -6,5 +6,4 @@ $(window).ready(()=>{
     setTimeout(()=> {
         $("body").removeClass('preload');
     }, 100);
-    $('.nano').nanoScroller();
 });

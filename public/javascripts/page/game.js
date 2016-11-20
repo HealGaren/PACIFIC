@@ -451,50 +451,57 @@ $(window).ready(()=> {
                     var $unit = $(`<div class='unit ${unitName}'">`);
                     $cell.append($unit);
                     // $unit.css({width: unitSize[unit[0]][0] * 0.7, height: unitSize[unit[0]][1] * 0.7});
-                    // $unit.css({left: (100 - $unit.width()) / 2});
+                    var thisWidth = $unit.width();
+                    var thisHeight = $unit.height();
 
-                    // var objPosY = unit[1] == BLUE ?
-                    $unit.css({'object-position':'0 0'});
+                    $unit.css({left: (100 - thisWidth) / 2});
+
+                    var objPosY = (unit[1] == BLUE)? 0:2;
+                    if(color != unit[1]) objPosY++;
+
+                    $unit.css({'background-position-y':-objPosY * thisHeight});
                     if (unit[1] == color) $unit.addClass('mine');
                 }
             }
         }
 
-        setInterval(animLoop, 50);
+        setInterval(animLoop, 150);
     }
 
     var isAnimPause = false;
-    var animFrame = 1;
+    var animFrame = 0;
 
     function animLoop(){
         if(isAnimPause) return;
 
+        var myFrame = 0;
+
+        switch(animFrame){
+            case 0:
+            case 1:
+            case 2:
+                myFrame = animFrame;
+                break;
+            case 3:
+                myFrame = 1;
+                break;
+        }
+
         $('.unit').each(function(){
             var $this = $(this);
-            var src = $this.attr('src');
 
-            var num = parseInt(src.charAt(src.length - 5));
 
-            var myFrame = 1;
-            switch(animFrame){
-                case 1:
-                case 2:
-                case 3:
-                    myFrame = animFrame;
-                    break;
-                case 4:
-                case 5:
-                    myFrame = 6 - animFrame;
-                    break;
-            }
+            $this.css('background-position-x', -$this.width() * (myFrame));
 
-            var toSrc = src.substr(0, src.length - 5) + myFrame + src.substr(src.length - 4, 4);
+            // var toSrc = src.substr(0, src.length - 5) + myFrame + src.substr(src.length - 4, 4);
+            //
+            // $this.attr('src', toSrc);
 
-            $this.attr('src', toSrc);
-            animFrame++;
-            if(animFrame >= 6) animFrame -= 5;
 
         });
+
+        animFrame++;
+        if(animFrame >= 4) animFrame -= 4;
     }
 
     function onGameEnd() {
