@@ -445,7 +445,7 @@ $(window).ready(()=> {
                 if (unitArray[y][x] != null) {
                     var unit = unitArray[y][x];
                     var unitName = unitImageArr[unit[0]];
-                    var unitFileEnd = `/${unit[1] == BLUE ? 'blue' : 'red'}_${color == unit[1] ? 'back' : 'front'}.png`;
+                    var unitFileEnd = `/${unit[1] == BLUE ? 'blue' : 'red'}_${color == unit[1] ? 'b' : 'f'}_1.png`;
                     var unitFile = unitImagePrefix + unitName + unitFileEnd;
 
                     var $unit = $(`<img class='unit ${unitName}' src="${unitFile}">`);
