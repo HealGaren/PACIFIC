@@ -2,120 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6ce2745-8c5e-4ba2-bc88-1340ff5902e4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/crap/blue_b_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/crap/blue_b_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/crap/blue_b_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/crap/blue_f_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/crap/blue_f_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/crap/blue_f_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/crap/red_b_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/crap/red_b_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/crap/red_b_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/crap/red_f_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/crap/red_f_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/crap/red_f_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/crawfish/blue_b_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/crawfish/blue_b_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/crawfish/blue_b_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/crawfish/blue_f_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/crawfish/blue_f_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/crawfish/blue_f_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/crawfish/red_b_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/crawfish/red_b_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/crawfish/red_b_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/crawfish/red_f_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/crawfish/red_f_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/crawfish/red_f_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/fugu/blue_b_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/fugu/blue_b_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/fugu/blue_b_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/fugu/blue_f_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/fugu/blue_f_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/fugu/blue_f_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/fugu/red_b_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/fugu/red_b_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/fugu/red_b_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/fugu/red_f_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/fugu/red_f_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/fugu/red_f_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/jellyfish/blue_b_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/jellyfish/blue_b_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/jellyfish/blue_b_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/jellyfish/blue_f_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/jellyfish/blue_f_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/jellyfish/blue_f_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/jellyfish/red_b_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/jellyfish/red_b_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/jellyfish/red_b_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/jellyfish/red_f_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/jellyfish/red_f_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/jellyfish/red_f_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/octopus/blue_b_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/octopus/blue_b_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/octopus/blue_b_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/octopus/blue_f_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/octopus/blue_f_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/octopus/blue_f_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/octopus/red_b_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/octopus/red_b_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/octopus/red_b_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/octopus/red_f_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/octopus/red_f_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/octopus/red_f_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/shrimp/blue_b_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/shrimp/blue_b_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/shrimp/blue_b_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/shrimp/blue_f_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/shrimp/blue_f_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/shrimp/blue_f_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/shrimp/red_b_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/shrimp/red_b_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/shrimp/red_b_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/shrimp/red_f_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/shrimp/red_f_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/shrimp/red_f_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/whale/blue_b_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/whale/blue_b_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/whale/blue_b_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/whale/blue_f_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/whale/blue_f_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/whale/blue_f_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/whale/red_b_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/whale/red_b_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/whale/red_b_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/whale/red_f_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/whale/red_f_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/game/unit/whale/red_f_3.png" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/crap/blue_back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/crap/blue_front.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/crap/red_back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/crap/red_front.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/crawfish/blue_back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/crawfish/blue_front.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/crawfish/red_back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/crawfish/red_front.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/fugu/blue_back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/fugu/blue_front.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/fugu/red_back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/fugu/red_front.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/jellyfish/blue_back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/jellyfish/blue_front.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/jellyfish/red_back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/jellyfish/red_front.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/octopus/blue_back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/octopus/blue_front.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/octopus/red_back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/octopus/red_front.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/shrimp/blue_back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/shrimp/blue_front.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/shrimp/red_back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/shrimp/red_front.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/whale/blue_back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/whale/blue_front.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/whale/red_back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/game/unit/whale/red_front.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/page/game.js" afterPath="$PROJECT_DIR$/public/javascripts/page/game.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/parent/layout.pug" afterPath="$PROJECT_DIR$/views/parent/layout.pug" />
     </list>
     <ignored path="WebGame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -153,8 +40,8 @@
           <file leaf-file-name="layout.pug" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/views/parent/layout.pug">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="209">
-                  <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+                <state relative-caret-position="171">
+                  <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
                   <folding />
                 </state>
               </provider>
@@ -234,7 +121,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="game.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="game.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public/javascripts/page/game.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="389">
@@ -308,10 +195,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="779">
+                <state relative-caret-position="19">
                   <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
                   <folding />
                 </state>
@@ -405,11 +292,11 @@
         <option value="&lt;7be115f3-c349-44c2-bc63-6c5e5c038af1&gt;/home/azureuser/yechan/Gangwon/mongo/star.js" />
         <option value="&lt;7be115f3-c349-44c2-bc63-6c5e5c038af1&gt;/home/azureuser/yechan/Gangwon/mongo/spot.js" />
         <option value="C:/Program Files/Android/Android Studio/plugins/android/lib/layoutlib/data/fonts/fonts.xml" />
-        <option value="$PROJECT_DIR$/views/parent/layout.pug" />
         <option value="$PROJECT_DIR$/public/stylesheets/page/shop.less" />
         <option value="$PROJECT_DIR$/public/stylesheets/nanoscroller.less" />
         <option value="$PROJECT_DIR$/public/javascripts/common/common.js" />
         <option value="$PROJECT_DIR$/public/javascripts/page/game.js" />
+        <option value="$PROJECT_DIR$/views/parent/layout.pug" />
       </list>
     </option>
   </component>
@@ -1106,7 +993,7 @@
       <workItem from="1478658964121" duration="5459000" />
       <workItem from="1478668714283" duration="9289000" />
       <workItem from="1479261578761" duration="3963000" />
-      <workItem from="1479653437178" duration="3170000" />
+      <workItem from="1479653437178" duration="3797000" />
     </task>
     <task id="LOCAL-00001" summary="와우! 커밋을 거의 안했다니">
       <created>1479657383419</created>
@@ -1115,26 +1002,33 @@
       <option name="project" value="LOCAL" />
       <updated>1479657383419</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="리소스 애니메이션 형태로 수정">
+      <created>1479657630788</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1479657630788</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174679000" />
+    <option name="totallyTimeSpent" value="175306000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1918" height="1038" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3449946" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1598493" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3449946" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1598493" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33738938" sideWeight="0.5086114" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33738938" sideWeight="0.4913886" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32743362" sideWeight="0.52798706" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33738938" sideWeight="0.4913886" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25995576" sideWeight="0.45586652" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32743362" sideWeight="0.47416577" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32743362" sideWeight="0.4720129" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.49166667" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1162,7 +1056,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="와우! 커밋을 거의 안했다니" />
-    <option name="LAST_COMMIT_MESSAGE" value="와우! 커밋을 거의 안했다니" />
+    <MESSAGE value="리소스 애니메이션 형태로 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="리소스 애니메이션 형태로 수정" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1431,14 +1326,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/page/game.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4883">
@@ -1554,14 +1441,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/parent/layout.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/page/game.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="389">
@@ -1569,6 +1448,22 @@
           <folding>
             <marker date="1479657476034" expanded="true" signature="11420:11433" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/parent/layout.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>
