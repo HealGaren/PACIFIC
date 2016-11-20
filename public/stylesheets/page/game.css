@@ -309,18 +309,23 @@ body {
   position: absolute;
   bottom: 15px;
   left: 0;
+  background-size: 60%;
+  background-position: 0 0;
 }
 #html-wrap #content-wrap #chess-wrap #unit-wrap .line .cell .crap {
-  width: 67.2px;
+  width: 72px;
   height: 63px;
+  background: url('../../images/game/unit/crap.png');
 }
 #html-wrap #content-wrap #chess-wrap #unit-wrap .line .cell .crawfish {
   width: 57.6px;
   height: 90px;
+  background: url('../../images/game/unit/crawfish.png');
 }
 #html-wrap #content-wrap #chess-wrap #unit-wrap .line .cell .fugu {
   width: 66px;
   height: 66px;
+  background: url('../../images/game/unit/fugu.png');
 }
 #html-wrap #content-wrap #chess-wrap #unit-wrap .line .cell .octopus {
   width: 62.4px;
@@ -329,14 +334,18 @@ body {
 #html-wrap #content-wrap #chess-wrap #unit-wrap .line .cell .jellyfish {
   width: 68.4px;
   height: 82.2px;
+  background: url('../../images/game/unit/octopus.png');
 }
 #html-wrap #content-wrap #chess-wrap #unit-wrap .line .cell .shrimp {
-  width: 54px;
+  width: 55.8px;
   height: 79.2px;
+  background: url('../../images/game/unit/shrimp.png');
 }
 #html-wrap #content-wrap #chess-wrap #unit-wrap .line .cell .whale {
+  background-size: 70%;
   width: 71.4px;
   height: 89.88px;
+  background: url('../../images/game/unit/whale.png');
 }
 #html-wrap #content-wrap #chess-wrap #unit-wrap .line .cell .collect {
   width: 100%;

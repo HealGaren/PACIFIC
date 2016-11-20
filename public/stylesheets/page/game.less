@@ -411,26 +411,31 @@ html, body{
               position:absolute;
               bottom:15px;
               left:0;
+              background-size:60%;
+              background-position: 0 0;
             }
 
             @unit-scale:0.6;
 
             .crap {
-              @my-width:112px * @unit-scale;
+              @my-width:120px * @unit-scale;
               width:@my-width;
               height:105px * @unit-scale;
+              background:url('../../images/game/unit/crap.png');
             }
 
             .crawfish {
               @my-width:96px * @unit-scale;
               width:@my-width;
               height:150px * @unit-scale;
+              background:url('../../images/game/unit/crawfish.png');
             }
 
             .fugu {
               @my-width:110px * @unit-scale;
               width:@my-width;
               height:110px * @unit-scale;
+              background:url('../../images/game/unit/fugu.png');
             }
 
             .octopus {
@@ -443,20 +448,26 @@ html, body{
               @my-width:114px * @unit-scale;
               width:@my-width;
               height:137px * @unit-scale;
+              background:url('../../images/game/unit/octopus.png');
             }
 
             .shrimp {
-              @my-width:90px * @unit-scale;
+              @my-width:93px * @unit-scale;
               width:@my-width;
               height:132px * @unit-scale;
+              background:url('../../images/game/unit/shrimp.png');
             }
 
             .whale {
               @whale-scale:0.7;
+              background-size:70%;
+
 
               @my-width:170px * @unit-scale * @whale-scale;
               width:@my-width;
               height:214px * @unit-scale * @whale-scale;
+
+              background:url('../../images/game/unit/whale.png');
             }
 
 

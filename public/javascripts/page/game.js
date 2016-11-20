@@ -38,9 +38,9 @@ unitImageArr[가재] = 'crawfish';
 
 
 var unitSize = [];
-unitSize[새우] = [90, 132];
-unitSize[꽃게] = [112, 105];
-unitSize[복어] = [110, 100];
+unitSize[새우] = [93, 132];
+unitSize[꽃게] = [120, 105];
+unitSize[복어] = [110, 110];
 unitSize[문어] = [104, 170];
 unitSize[범고래] = [170, 214];
 unitSize[해파리] = [114, 137];
@@ -446,12 +446,15 @@ $(window).ready(()=> {
                     var unit = unitArray[y][x];
                     var unitName = unitImageArr[unit[0]];
                     var unitFileEnd = `/${unit[1] == BLUE ? 'blue' : 'red'}_${color == unit[1] ? 'b' : 'f'}_1.png`;
-                    var unitFile = unitImagePrefix + unitName + unitFileEnd;
+                    var unitFile = unitImagePrefix + unitName + '.png';
 
-                    var $unit = $(`<img class='unit ${unitName}' src="${unitFile}">`);
+                    var $unit = $(`<div class='unit ${unitName}'">`);
                     $cell.append($unit);
-                    $unit.css({width: unitSize[unit[0]][0] * 0.7, height: unitSize[unit[0]][1] * 0.7});
-                    $unit.css({left: (100 - $unit.width()) / 2});
+                    // $unit.css({width: unitSize[unit[0]][0] * 0.7, height: unitSize[unit[0]][1] * 0.7});
+                    // $unit.css({left: (100 - $unit.width()) / 2});
+
+                    // var objPosY = unit[1] == BLUE ?
+                    $unit.css({'object-position':'0 0'});
                     if (unit[1] == color) $unit.addClass('mine');
                 }
             }
