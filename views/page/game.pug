@@ -1,0 +1,100 @@
+extends ../parent/layout
+
+mixin center
+    div.center-outer
+        div.center-inner
+            if block
+                block
+
+
+block head-more
+    link(rel='stylesheet', type='text/css', href='/stylesheets/page/game.css')
+    script(src='/javascripts/page/game.js')
+
+block content
+    div#html-wrap
+
+        div#end-black-wrap
+        div#result-wrap
+            div#result
+                div#result-title
+                div#result-content
+                    span#content-title 게임결과
+                    div#wrap-result-content
+                        div#jinjoo-img
+                        div#wrap-result-scores
+                            div#result-scores.score
+                                span.score-name 현재 내 점수
+                                img(src='/images/game/game_finish/noname_bar.png')
+                                div.score-num-wrap
+                                    span.score-num 180000
+                            div#get-scores.score
+                                span.score-name 얻은 점수
+                                img(src='/images/game/game_finish/noname_bar.png')
+                                div.score-num-wrap
+                                    span.score-num 10
+                            div#bonus-scores.score
+                                span.score-name 보너스
+                                img(src='/images/game/game_finish/noname_bar.png')
+                                div.score-num-wrap
+                                    span.score-num 10
+
+                    div#done-button.btn
+                        span 돌아가기
+                        img(src='/images/game/game_finish/undo_icon.png')
+
+        div#left-menu.menu(style='display:none;')
+            div#player-bar
+                div#player-image
+                div#player-log
+                    span#win-number 74
+                    span.red W&nbsp;
+                    span#lose-number 69
+                    span.blue L&nbsp;
+                    span#win-percent 80%
+                div#player-name Loading...
+            div#card
+            div#imoticon-bar
+                div#imoticon-bar-desc
+                    span 감정표현
+                div#imoticons
+                    img#dead-icon.icon.btn(src="/images/game/ingame/dead_icon.png")
+                    img#smile-icon.icon.btn(src="/images/game/ingame/smile_icon.png")
+                    img#angry-icon.icon.btn(src="/images/game/ingame/angry_icon.png")
+
+
+
+        div#right-menu.menu(style='display:none;')
+            div#other-card
+            div#other-player-bar
+                div#other-player-image
+                div#other-player-log
+                    span#other-win-number 74
+                    span.red W&nbsp;
+                    span#other-lose-number 69
+                    span.blue L&nbsp;
+                    span#other-win-percent 80%
+                div#other-player-name Loading...
+
+        div#black-wrap
+        div#upgrade-wrap
+            div#select-upgrade
+                span 무엇으로 진급시킬까요?
+                div#upgrade-buttons
+                    div#crap-wrap.btn
+                        img(src="/images/game/unit/crap/blue_front.png")
+                        span 꽃게
+                    div#crawfish-wrap.btn
+                        img(src="/images/game/unit/crawfish/blue_front.png")
+                        span 가재
+
+        div#content-wrap(style='display:none;')
+            +center
+                span#message
+                div#chess-wrap
+                    div#unit-wrap
+                        -for(var i=0; i<7; i++)
+                            div(class=`line ${i}`)
+                                -for(var j=0; j<7; j++)
+                                    div(class=`cell ${j}`)
+

@@ -36,8 +36,36 @@ var schema = new mongoose.Schema({
     friends: {
         type: [{
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'users'
+            ref: 'players'
         }]
+    },
+    win: {
+        type: Number,
+        default: 0
+    },
+    lose: {
+        type: Number,
+        default: 0
+    },
+
+    money: {
+        type: Number,
+        default: 0
+    },
+
+    isHaveSmile: {
+        type: Boolean,
+        default:false
+    },
+
+    isHaveAngry: {
+        type: Boolean,
+        default:false
+    },
+
+    isHaveDead: {
+        type: Boolean,
+        default:false
     },
 });
 
@@ -135,7 +163,7 @@ schema.statics.registerLocal = function (email, password, nickname) {
  */
 schema.statics.loginLocal = function (email, password) {
     return this.findOne({localEmail: email}).exec()
-        .then(user=>{
+        .then(user=> {
             if (!user) throw new MyError("이메일이 존재하지 않습니다.", 401);
             else if (!user.equalsPassword(password))
                 throw new MyError("비밀번호가 일치하지 않습니다.", 401);
@@ -151,7 +179,7 @@ schema.statics.loginLocal = function (email, password) {
  */
 schema.statics.loginFacebook = function (facebookId, email) {
     return this.findOne({facebookID: facebookId}).exec()
-        .then(user=>{
+        .then(user=> {
             if (user) return user;
             else return this.registerFacebook(facebookId, email);
         });
@@ -186,6 +214,37 @@ schema.statics.removeFriend = function (id, friendId) {
     return this.findByIdAndUpdate(id, {$pull: {friends: friendId}}).exec();
 };
 
-var model = mongoose.model('users', schema);
+
+schema.statics.addWinOrLose = function (id, isWin) {
+    var key = isWin?'win':'lose';
+    var obj = {};
+    obj[key] = 1;
+    return this.findByIdAndUpdate(id, {
+        $inc: obj
+    }).exec();
+};
+
+schema.statics.addMoney = function (id, money) {
+    return this.findByIdAndUpdate(id, {
+        $inc: {
+            money:money
+        }
+    }).exec();
+};
+
+schema.statics.buy = function(id, key){
+
+    var obj = {};
+    obj[key] = true;
+    return this.findByIdAndUpdate(id, {
+        $set: obj,
+        $inc: {
+            money:-100
+        }
+    });
+};
+
+
+var model = mongoose.model('players', schema);
 
 module.exports = model;

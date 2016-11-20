@@ -1,7 +1,14 @@
+* {
+  font-family: 'Nanum Square';
+}
 html,
 body {
   padding: 0;
   margin: 0;
+}
+body {
+  background: url("../../images/login/login_bg.png") no-repeat center center fixed;
+  background-size: cover;
 }
 .center-outer {
   display: table;
@@ -14,11 +21,22 @@ body {
   text-align: center;
 }
 .btn {
+  cursor: pointer;
   opacity: .7;
+  transition: all 0.3s;
 }
 .btn:hover {
   opacity: 1;
 }
 .btn:active {
   opacity: .5;
+}
+.preload * {
+  transition: none !important;
+}
+.red {
+  color: darkred;
+}
+.blue {
+  color: darkblue;
 }

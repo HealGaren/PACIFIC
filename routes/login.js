@@ -25,7 +25,7 @@ router.get('/facebook/callback', (req, res, next)=> {
         else req.login(user, err=> {
                 if (err) res.status(500).send(err.message);
                 else {
-                    if (!user.nickname) res.redirect('/add-nickname');
+                    if (!user.nickname) res.redirect('/login/nickname');
                     else res.redirect('/');
                 }
             });
@@ -33,7 +33,16 @@ router.get('/facebook/callback', (req, res, next)=> {
 });
 
 router.get('/nickname', permission.needLogin, (req, res, next)=>{
+    res.render('page/nickname', { title: '가입하기' });
+});
 
+router.get('/register', (req, res, next)=>{
+    res.render('page/register', { title: '가입하기' });
+});
+
+router.get('/logout', (req, res, next)=>{
+    req.logout();
+    res.redirect('/login');
 });
 
 

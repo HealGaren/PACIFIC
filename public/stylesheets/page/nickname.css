@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+@import url('https://fonts.googleapis.com/css?family=Exo:600');
+#html-wrap {
+  width: 900px;
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+#html-wrap #title {
+  margin-top: 120px;
+  width: 70%;
+}
+#html-wrap #nickname-wrap {
+  margin-top: 80px;
+}
+#html-wrap #nickname-wrap #nickname-form {
+  display: inline-block;
+  margin: auto;
+  width: 60%;
+  box-sizing: border-box;
+  border: 36.8px solid transparent;
+  border-bottom-width: 31.2px;
+  border-right-width: 37.6px;
+  border-image: url("../../images/register/login_data.png") 46 46 39 47 fill repeat;
+}
+#html-wrap #nickname-wrap #nickname-form .input-wrap-box {
+  position: relative;
+  width: 95%;
+  height: 40px;
+  box-sizing: border-box;
+  border-bottom: 2px solid white;
+  margin: 20px auto auto;
+}
+#html-wrap #nickname-wrap #nickname-form .input-wrap-box:nth-of-type(1) {
+  margin-top: 10px;
+}
+#html-wrap #nickname-wrap #nickname-form .input-wrap-box:nth-last-of-type(1) {
+  margin-bottom: 50px;
+}
+#html-wrap #nickname-wrap #nickname-form .input-wrap-box .input-center {
+  position: relative;
+}
+#html-wrap #nickname-wrap #nickname-form .input-wrap-box .input-center input {
+  font-family: Roboto, sans-serif;
+  width: 96%;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: white;
+}
+#html-wrap #nickname-wrap #nickname-form .input-wrap-box .input-center input:focus {
+  outline: none;
+}
+#html-wrap #nickname-wrap #nickname-form .input-wrap-box .input-center input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+#html-wrap #nickname-wrap #nickname-form .input-wrap-box .input-center input:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+#html-wrap #nickname-wrap #nickname-form .input-wrap-box .input-center input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+#html-wrap #nickname-wrap #nickname-form .input-wrap-box .input-center input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+#html-wrap #nickname-wrap #nickname-form #register-button {
+  margin-top: 30px;
+  float: right;
+}
+#html-wrap #nickname-wrap #nickname-form:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#html-wrap #bottom-space {
+  height: 30px;
+}

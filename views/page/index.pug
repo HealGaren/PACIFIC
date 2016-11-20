@@ -1,6 +1,59 @@
 extends ../parent/layout
 
+mixin center
+    div.center-outer
+        div.center-inner
+            if block
+                block
+
+block head-more
+    link(rel='stylesheet', type='text/css', href='/stylesheets/page/index.css')
+    script(src='/javascripts/page/index.js')
+
 block content
-  h1= title
-  p Welcome to #{title}
-  script(type='text/javascript', src='/socket.io/socket.io.js')
+    div#html-wrap
+        div#left-menu.menu(style='display:none;')
+            div#player-bar
+                div#player-image
+                div#player-log
+                    span#win-number 74
+                    span.red W&nbsp;
+                    span#lose-number 69
+                    span.blue L&nbsp;
+                    span#win-percent 80%
+                div#player-name Loading...
+            div#friend-list-wrap
+                div#search-bar
+                div#friend-list.nano
+                    div.content
+                        div gg
+                        div gg
+                        div gg
+                        div gg
+                        div gg
+                        div gg
+                        div gg
+                        div gg
+
+            img#friend-icon.btn(src="/images/index/friend_icon.png")
+
+        div#right-menu.menu(style='display:none;')
+            div#money-bar
+                span 10000 pearl
+            div#button-list
+                img#shop-icon.btn(src="/images/index/shop_icon.png")
+                img#rank-icon.btn(src="/images/index/rank_icon.png")
+                img#logout-icon.btn(src="/images/index/undo_button.png")
+
+        div#content-wrap(style='display:none;')
+            +center
+                div#jinjoo
+                    +center
+                        span
+                div#matching-bar
+                    span 서버 접속 중
+                div#matching-percent-string
+                    span 현재 대기열&nbsp;
+                    span#percent 비어 있음
+                    span ...
+                div#space

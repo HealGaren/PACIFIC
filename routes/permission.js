@@ -6,7 +6,7 @@
 
 function needLogin(req, res, next) {
     if(req.isAuthenticated()) next();
-    else res.redirect('/');
+    else res.redirect('/login');
 }
 
 

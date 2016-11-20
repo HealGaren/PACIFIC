@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+@import url('https://fonts.googleapis.com/css?family=Exo:600');
+html,
+body {
+  height: 100%;
+}
+#html-wrap {
+  width: 100%;
+  height: 100%;
+  color: white;
+  position: relative;
+}
+#html-wrap .menu {
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  z-index: 2;
+}
+#html-wrap .menu > * {
+  position: absolute;
+}
+#html-wrap #end-black-wrap {
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  display: none;
+  opacity: 0.7;
+  position: absolute;
+}
+#html-wrap #result-wrap {
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+}
+#html-wrap #result-wrap #result {
+  margin-top: 150px;
+  text-align: center;
+  opacity: 1.0;
+}
+#html-wrap #result-wrap #result #result-title {
+  margin: auto;
+  background: url('../../images/game/game_finish/win_title.png') no-repeat;
+  background-position-x: center;
+  background-size: contain;
+  width: 700px;
+  height: 150px;
+}
+#html-wrap #result-wrap #result #result-content {
+  margin: 30px auto 0;
+  background: url('../../images/game/game_finish/game_finish_frame.png') no-repeat;
+  background-position-x: center;
+  background-size: contain;
+  width: 900px;
+  height: 500px;
+}
+#html-wrap #result-wrap #result #result-content #content-title {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 45px;
+}
+#html-wrap #result-wrap #result #result-content #wrap-result-content #jinjoo-img {
+  float: left;
+  display: inline-block;
+  margin-top: 70px;
+  margin-left: 70px;
+  background: url('../../images/jinjoo/pearl.png') no-repeat center;
+  background-size: contain;
+  width: 300px;
+  height: 300px;
+}
+#html-wrap #result-wrap #result #result-content #wrap-result-content #wrap-result-scores {
+  float: left;
+  display: inline-block;
+  margin-top: 70px;
+  margin-left: 120px;
+  width: 250px;
+}
+#html-wrap #result-wrap #result #result-content #wrap-result-content #wrap-result-scores .score {
+  text-align: left;
+  margin-top: 30px;
+}
+#html-wrap #result-wrap #result #result-content #wrap-result-content #wrap-result-scores .score:nth-child(1) {
+  margin-top: 0;
+}
+#html-wrap #result-wrap #result #result-content #wrap-result-content #wrap-result-scores .score .score-name {
+  display: block;
+  font-size: 20px;
+}
+#html-wrap #result-wrap #result #result-content #wrap-result-content #wrap-result-scores .score img {
+  width: 170px;
+  height: 9px;
+}
+#html-wrap #result-wrap #result #result-content #wrap-result-content #wrap-result-scores .score .score-num-wrap {
+  display: block;
+  margin-bottom: -10px;
+  margin-left: 100px;
+}
+#html-wrap #result-wrap #result #result-content #wrap-result-content #wrap-result-scores .score .score-num-wrap .score-num {
+  font-size: 40px;
+}
+#html-wrap #result-wrap #result #result-content #wrap-result-content:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#html-wrap #result-wrap #result #result-content #done-button {
+  margin-top: 22px;
+  margin-right: 55px;
+  text-align: right;
+  font-size: 20px;
+}
+#html-wrap #result-wrap #result #result-content #done-button img {
+  margin-left: 15px;
+  vertical-align: middle;
+}
+#html-wrap #left-menu {
+  width: 450px;
+  left: 30px;
+}
+#html-wrap #left-menu #player-bar {
+  width: 315px;
+  height: 105px;
+  background: url('../../images/game/ingame/player_bar.png');
+  background-size: cover;
+}
+#html-wrap #left-menu #player-bar #player-image {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  width: 81px;
+  height: 81px;
+  border-radius: 40px;
+}
+#html-wrap #left-menu #player-bar #player-log {
+  position: absolute;
+  font-size: 12px;
+  left: 103px;
+  top: 12px;
+  color: #555;
+}
+#html-wrap #left-menu #player-bar #player-name {
+  position: absolute;
+  font-size: 20px;
+  right: 0;
+  width: 230px;
+  text-align: center;
+  bottom: 25px;
+  color: #222;
+}
+#html-wrap #left-menu #card {
+  top: 150px;
+  height: 250px;
+  left: 100px;
+  width: 250px;
+  display: none;
+  background-size: cover;
+}
+#html-wrap #left-menu #imoticon-bar {
+  bottom: 0;
+  width: 450px;
+  height: 150px;
+  background: url('../../images/game/ingame/imoticon_bar.png');
+  background-size: cover;
+}
+#html-wrap #left-menu #imoticon-bar #imoticon-bar-desc {
+  position: absolute;
+  right: 85px;
+  top: 13px;
+}
+#html-wrap #left-menu #imoticon-bar #imoticons {
+  position: absolute;
+  left: 0;
+  right: 20px;
+  bottom: 10px;
+  text-align: center;
+}
+#html-wrap #left-menu #imoticon-bar #imoticons img {
+  margin-left: 20px;
+}
+#html-wrap #left-menu #imoticon-bar #imoticons img.non-bought {
+  opacity: 0.5;
+  cursor: default;
+}
+#html-wrap #left-menu #imoticon-bar #imoticons img:nth-child(0) {
+  margin-left: 0;
+}
+#html-wrap #right-menu {
+  width: 450px;
+  right: 30px;
+}
+#html-wrap #right-menu #other-card {
+  bottom: 150px;
+  height: 250px;
+  right: 100px;
+  width: 250px;
+  background-size: cover;
+}
+#html-wrap #right-menu #other-player-bar {
+  width: 315px;
+  height: 105px;
+  right: 0;
+  bottom: 0;
+  background: url('../../images/game/ingame/player_bar_flip.png');
+  background-size: cover;
+}
+#html-wrap #right-menu #other-player-bar #other-player-image {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 81px;
+  height: 81px;
+  border-radius: 40px;
+}
+#html-wrap #right-menu #other-player-bar #other-player-log {
+  position: absolute;
+  font-size: 12px;
+  right: 103px;
+  top: 12px;
+  color: #555;
+}
+#html-wrap #right-menu #other-player-bar #other-player-name {
+  position: absolute;
+  font-size: 20px;
+  left: 0;
+  width: 230px;
+  text-align: center;
+  bottom: 25px;
+  color: #222;
+}
+#html-wrap #black-wrap {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  display: none;
+  opacity: 0;
+  position: absolute;
+}
+#html-wrap #upgrade-wrap {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+}
+#html-wrap #upgrade-wrap #select-upgrade {
+  margin-top: 200px;
+  text-align: center;
+}
+#html-wrap #upgrade-wrap #select-upgrade span {
+  font-size: 30px;
+}
+#html-wrap #upgrade-wrap #select-upgrade #upgrade-buttons .btn {
+  display: inline-block;
+}
+#html-wrap #upgrade-wrap #select-upgrade #upgrade-buttons .btn:nth-child(2) {
+  margin-left: 50px;
+}
+#html-wrap #upgrade-wrap #select-upgrade #upgrade-buttons .btn img {
+  width: 300px;
+  height: 300px;
+}
+#html-wrap #upgrade-wrap #select-upgrade #upgrade-buttons .btn span {
+  font-size: 40px;
+}
+#html-wrap #content-wrap {
+  z-index: 0;
+  width: 900px;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+}
+#html-wrap #content-wrap #message {
+  margin: auto;
+  font-size: 30px;
+  padding: 5px 10px;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  display: block;
+}
+#html-wrap #content-wrap #chess-wrap {
+  width: 900px;
+  height: 800px;
+  position: relative;
+  background: url('../../images/game/chess.png');
+}
+#html-wrap #content-wrap #chess-wrap #unit-wrap {
+  position: absolute;
+  left: 100px;
+  top: 58px;
+  width: 700px;
+  height: 700px;
+}
+#html-wrap #content-wrap #chess-wrap #unit-wrap .line {
+  height: 100px;
+}
+#html-wrap #content-wrap #chess-wrap #unit-wrap .line .cell {
+  position: relative;
+  display: inline-block;
+  transition: background 0.5s;
+  width: 100px;
+  height: 100%;
+}
+#html-wrap #content-wrap #chess-wrap #unit-wrap .line .cell .unit {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+}
+#html-wrap #content-wrap #chess-wrap #unit-wrap .line .cell .crap {
+  width: 67.2px;
+  height: 63px;
+}
+#html-wrap #content-wrap #chess-wrap #unit-wrap .line .cell .crawfish {
+  width: 57.6px;
+  height: 90px;
+}
+#html-wrap #content-wrap #chess-wrap #unit-wrap .line .cell .fugu {
+  width: 66px;
+  height: 66px;
+}
+#html-wrap #content-wrap #chess-wrap #unit-wrap .line .cell .octopus {
+  width: 62.4px;
+  height: 102px;
+}
+#html-wrap #content-wrap #chess-wrap #unit-wrap .line .cell .jellyfish {
+  width: 68.4px;
+  height: 82.2px;
+}
+#html-wrap #content-wrap #chess-wrap #unit-wrap .line .cell .shrimp {
+  width: 54px;
+  height: 79.2px;
+}
+#html-wrap #content-wrap #chess-wrap #unit-wrap .line .cell .whale {
+  width: 71.4px;
+  height: 89.88px;
+}
+#html-wrap #content-wrap #chess-wrap #unit-wrap .line .cell .collect {
+  width: 100%;
+  height: 100%;
+  background: rgba(100, 255, 100, 0.5);
+}
+#html-wrap #content-wrap #chess-wrap #unit-wrap .line .cell .collect.target {
+  background: rgba(255, 100, 100, 0.5);
+}
+#html-wrap #bottom-space {
+  height: 30px;
+}

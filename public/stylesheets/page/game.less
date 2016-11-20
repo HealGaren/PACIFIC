@@ -1,0 +1,486 @@
+//noinspection CssUnknownTarget
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+//noinspection CssUnknownTarget
+@import url('https://fonts.googleapis.com/css?family=Exo:600');
+
+
+
+.placeholder(@rules) {
+  &::-webkit-input-placeholder {
+    @rules();
+  }
+
+  &:-moz-placeholder {
+    @rules();
+  }
+
+  &::-moz-placeholder {
+    @rules();
+  }
+
+  &:-ms-input-placeholder {
+    @rules();
+  }
+}
+
+html, body{
+  height:100%;
+}
+
+#html-wrap {
+  width: 100%;
+  height:100%;
+  color: white;
+  position:relative;
+
+  .menu{
+    display:inline-block;
+    position:absolute;
+    top:30px;
+    bottom:30px;
+    z-index: 2;
+
+  }
+
+  .menu > * {
+    position:absolute;
+  }
+
+
+
+
+  #end-black-wrap {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    display: none;
+    opacity: 0.7;
+    position: absolute;
+  }
+
+  #result-wrap{
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    #result {
+      margin-top:150px;
+      text-align: center;
+      opacity: 1.0;
+
+      #result-title {
+        margin:auto;
+        background:url('../../images/game/game_finish/win_title.png') no-repeat;
+        background-position-x: center;
+        background-size:contain;
+        width:700px;
+        height:150px;
+
+      }
+
+      #result-content {
+        margin:30px auto 0;
+        background: url('../../images/game/game_finish/game_finish_frame.png') no-repeat;
+        background-position-x: center;
+        background-size: contain;
+        width:900px;
+        height:500px;
+
+        #content-title {
+          display:inline-block;
+          margin-top: 20px;
+          font-size: 45px;
+        }
+
+        #wrap-result-content {
+
+          #jinjoo-img{
+            float:left;
+            display:inline-block;
+            margin-top:70px;
+            margin-left:70px;
+            background: url('../../images/jinjoo/pearl.png') no-repeat center;
+            background-size: contain;
+            width:300px;
+            height:300px;
+          }
+
+          #wrap-result-scores{
+            float:left;
+            display:inline-block;
+            margin-top:70px;
+            margin-left:120px;
+            width:250px;
+
+
+            .score{
+              text-align: left;
+              margin-top:30px;
+              &:nth-child(1){
+                margin-top:0;
+              }
+
+              .score-name{
+                display:block;
+                font-size:20px;
+              }
+
+              img {
+                width:170px;
+                height:9px;
+              }
+
+              .score-num-wrap{
+                display:block;
+                margin-bottom:-10px;
+                margin-left:100px;
+
+                .score-num{
+                  font-size:40px;
+                }
+
+              }
+
+            }
+
+          }
+
+          &:after {
+            content:"";
+            display:block;
+            clear: both;
+          }
+
+
+        }
+
+
+        #done-button {
+          margin-top:22px;
+          margin-right:55px;
+          text-align: right;
+          font-size:20px;
+
+          img {
+            margin-left:15px;
+            vertical-align: middle;
+          }
+        }
+
+      }
+    }
+
+  }
+
+
+  #left-menu{
+    @left-width: 450px;
+
+    width: @left-width;
+    left:30px;
+
+    #player-bar {
+      @player-bar-scale:@left-width * 0.7 / 435px;
+      width:435px * @player-bar-scale;
+      height:145px * @player-bar-scale;
+      background:url('../../images/game/ingame/player_bar.png');
+      background-size: cover;
+
+      #player-image {
+        position:absolute;
+        left:12px;
+        top:12px;
+        width:81px;
+        height:81px;
+        border-radius:40px;
+      }
+
+      #player-log {
+        position:absolute;
+        font-size:12px;
+        left:103px;
+        top:12px;
+        color:#555;
+      }
+
+      #player-name {
+        position:absolute;
+        font-size:20px;
+        right:0;
+        width:230px;
+        text-align: center;
+        bottom:25px;
+        color:#222;
+      }
+
+
+
+    }
+
+    #card{
+      top:150px;
+      height:250px;
+      left:100px;
+      width:250px;
+      display:none;
+      background-size: cover;
+    }
+
+    #imoticon-bar{
+      bottom:0;
+
+      @imoticon-bar-scale:@left-width / 528px;
+      width:528px * @imoticon-bar-scale;
+      height:176px * @imoticon-bar-scale;
+      background:url('../../images/game/ingame/imoticon_bar.png');
+      background-size:cover;
+
+      #imoticon-bar-desc{
+        position:absolute;
+        right:85px;
+        top:13px;
+      }
+
+      #imoticons{
+        position:absolute;
+        left:0;
+        right:20px;
+        bottom:10px;
+        text-align: center;
+
+        img {
+          margin-left:20px;
+
+          &.non-bought {
+            opacity:0.5;
+            cursor:default;
+          }
+          &:nth-child(0){
+            margin-left: 0;
+          }
+        }
+      }
+    }
+
+  }
+
+  #right-menu{
+    @right-width: 450px;
+
+    width: @right-width;
+    right:30px;
+
+
+    #other-card{
+      bottom:150px;
+      height:250px;
+      right:100px;
+      width:250px;
+      background-size: cover;
+    }
+
+    #other-player-bar {
+      @player-bar-scale:@right-width * 0.7 / 435px;
+      width:435px * @player-bar-scale;
+      height:145px * @player-bar-scale;
+      right:0;
+      bottom:0;
+      background:url('../../images/game/ingame/player_bar_flip.png');
+      background-size: cover;
+
+
+      #other-player-image {
+        position:absolute;
+        right:12px;
+        top:12px;
+        width:81px;
+        height:81px;
+        border-radius:40px;
+      }
+
+      #other-player-log {
+        position:absolute;
+        font-size:12px;
+        right:103px;
+        top:12px;
+        color:#555;
+      }
+
+      #other-player-name {
+        position:absolute;
+        font-size:20px;
+        left:0;
+        width:230px;
+        text-align: center;
+        bottom:25px;
+        color:#222;
+      }
+
+    }
+
+
+  }
+
+
+  #black-wrap {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    display: none;
+    opacity: 0;
+    position: absolute;
+  }
+
+  #upgrade-wrap{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+
+    #select-upgrade {
+      margin-top:200px;
+      text-align: center;
+      span {
+        font-size:30px;
+      }
+
+      #upgrade-buttons{
+        .btn {
+          display:inline-block;
+          &:nth-child(2){
+            margin-left:50px;
+          }
+
+          img {
+            width:300px;
+            height:300px;
+          }
+
+          span {
+            font-size:40px;
+          }
+        }
+      }
+    }
+  }
+
+
+  #content-wrap {
+    z-index: 0;
+    width:900px;
+    height:100%;
+    margin:auto;
+    text-align: center;
+
+    #message{
+      margin:auto;
+      font-size:30px;
+      padding:5px 10px;
+      background:rgba(0, 0, 0, 0.4);
+      z-index:999;
+      display:block;
+    }
+
+    #chess-wrap {
+      width:900px;
+      height:800px;
+      position:relative;
+      background:url('../../images/game/chess.png');
+
+      #unit-wrap{
+        position:absolute;
+        left:100px;
+        top:58px;
+        width:700px;
+        height:700px;
+        .line{
+          height:100px;
+
+          .cell {
+            position:relative;
+            display:inline-block;
+            transition: background 0.5s;
+            width:100px;
+            height:100%;
+
+            .unit {
+              position:absolute;
+              bottom:15px;
+              left:0;
+            }
+
+            @unit-scale:0.6;
+
+            .crap {
+              @my-width:112px * @unit-scale;
+              width:@my-width;
+              height:105px * @unit-scale;
+            }
+
+            .crawfish {
+              @my-width:96px * @unit-scale;
+              width:@my-width;
+              height:150px * @unit-scale;
+            }
+
+            .fugu {
+              @my-width:110px * @unit-scale;
+              width:@my-width;
+              height:110px * @unit-scale;
+            }
+
+            .octopus {
+              @my-width:104px * @unit-scale;
+              width: @my-width;
+              height:170px * @unit-scale;
+            }
+
+            .jellyfish {
+              @my-width:114px * @unit-scale;
+              width:@my-width;
+              height:137px * @unit-scale;
+            }
+
+            .shrimp {
+              @my-width:90px * @unit-scale;
+              width:@my-width;
+              height:132px * @unit-scale;
+            }
+
+            .whale {
+              @whale-scale:0.7;
+
+              @my-width:170px * @unit-scale * @whale-scale;
+              width:@my-width;
+              height:214px * @unit-scale * @whale-scale;
+            }
+
+
+            .collect {
+              width:100%;
+              height:100%;
+              background:rgba(100, 255, 100, 0.5);
+            }
+
+            .collect.target{
+              background:rgba(255, 100, 100, 0.5);
+
+            }
+
+
+          }
+        }
+      }
+
+    }
+
+  }
+
+  #bottom-space {
+    height:30px;
+  }
+}

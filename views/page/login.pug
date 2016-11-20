@@ -1,27 +1,33 @@
 extends ../parent/layout
 
 mixin center
-    div.center-outer
+    div.center-outer.input-center
         div.center-inner
             if block
                 block
 
+mixin input-box
+    div.input-wrap-box
+        div.input-round
+        +center
+            if block
+                block
 
 block head-more
     link(rel='stylesheet', type='text/css', href='/stylesheets/page/login.css')
+    script(src='/javascripts/page/login.js')
 
 block content
     div#html-wrap
-        img#title(src='/images/login/title.png')
+        img#title(src='/images/login/title.png' style='display:none;')
 
-        div#login-wrap
+        div#login-wrap(style='display:none;')
             form#login-form
-                div.input-round
-                    +center
-                        input(type="email" name="email" placeholder="E-mail" autocomplete="off" required)
-                div.input-round
-                    +center
-                        input(type="password" name="password" placeholder="Pw" autocomplete="off" required)
+                +input-box
+                    input(type="email" name="email" placeholder="E-mail" autocomplete="off" required)
+                +input-box
+                    input(type="password" name="password" placeholder="Pw" autocomplete="off" required)
+                input(type="submit" style="display:none;")
                 img#login-button.btn(src="/images/login/login_button.png")
 
             div.divider
@@ -29,7 +35,7 @@ block content
                 span or
                 div
             div#else-buttons
-                a(href="/login/signup")
-                    img#signup-btn.btn(src="/images/login/signup_bar.png")
-                a(href="/login/facebook")
-                    img#facebook-btn.btn(src="/images/login/facebook_bar.png")
+                img#signup-btn.btn(src="/images/login/signup_bar.png")
+                img#facebook-btn.btn(src="/images/login/facebook_bar.png")
+
+        div#bottom-space

@@ -10,7 +10,7 @@ var permission = require('./permission');
 var router = express.Router();
 
 
-router.post('/local', middleware.parseParam.body([
+router.post('/login/local', middleware.parseParam.body([
     ['email', 'string', true],
     ['password', 'string', true]
 ]), (req, res, next)=> {
@@ -20,7 +20,7 @@ router.post('/local', middleware.parseParam.body([
         else if (!user) res.status(401).send(info.message);
         else req.login(user, err=> {
                 if (err) res.status(500).send(err.message);
-                else res.send("성공적으로 저장되었습니다.");
+                else res.send("성공적으로 로그인되었습니다.");
             });
     })(req, res, next);
 });
@@ -59,3 +59,5 @@ router.post('/nickname', permission.needLogin, middleware.parseParam.body([
             res.status(err.statusCode).send(err.message);
         });
 });
+
+module.exports = router;

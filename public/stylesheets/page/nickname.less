@@ -1,0 +1,116 @@
+//noinspection CssUnknownTarget
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+//noinspection CssUnknownTarget
+@import url('https://fonts.googleapis.com/css?family=Exo:600');
+
+
+
+.placeholder(@rules) {
+  &::-webkit-input-placeholder {
+    @rules();
+  }
+
+  &:-moz-placeholder {
+    @rules();
+  }
+
+  &::-moz-placeholder {
+    @rules();
+  }
+
+  &:-ms-input-placeholder {
+    @rules();
+  }
+}
+
+
+#html-wrap {
+  width: 900px;
+  margin: auto;
+  text-align: center;
+
+  color: white;
+
+  #title {
+    margin-top: 120px;
+    width:70%;
+  }
+
+
+  #nickname-wrap {
+
+    margin-top: 80px;
+
+    #nickname-form {
+      display:inline-block;
+
+      margin: auto;
+      width: 60%;
+
+      //border: 2px solid black;
+      box-sizing: border-box;
+
+      @border-scale: 0.8;
+
+      //noinspection CssInvalidPropertyValue
+      border: 46px*@border-scale solid transparent;
+      border-bottom-width: 39px*@border-scale;
+      border-right-width: 47px*@border-scale;
+
+      border-image: url("../../images/register/login_data.png") 46 46 39 47 fill repeat;
+      //background-color: rgba(255, 255, 255, 0.7);
+
+
+      .input-wrap-box {
+        position:relative;
+        width:95%;
+        height: 40px;
+        box-sizing: border-box;
+        border-bottom: 2px solid white;
+
+
+        margin: 20px auto auto;
+
+        &:nth-of-type(1) {
+          margin-top: 10px;
+        }
+        &:nth-last-of-type(1){
+          margin-bottom: 50px;
+        }
+
+
+        .input-center {
+          position:relative;
+          input {
+            font-family: Roboto, sans-serif;
+            width: 96%;
+            background: transparent;
+            border: none;
+            font-size: 20px;
+            &:focus {
+              outline: none;
+            }
+            color: white;
+            .placeholder({ color: rgba(255, 255, 255, 0.7) });
+          }
+        }
+      }
+
+      #register-button {
+
+        margin-top: 30px;
+        float: right;
+      }
+
+      &:after {
+        content:"";
+        display:block;
+        clear: both;
+      }
+    }
+  }
+
+  #bottom-space {
+    height:30px;
+  }
+}

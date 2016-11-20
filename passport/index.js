@@ -49,8 +49,9 @@ exports.init = function (app) {
                     .then(function (user) {
                         done(null, user);
                     }, function (err) {
-                        if (err instanceof MyError) done(null, false, err);
-                        else done(err, false);
+                        if (err instanceof MyError) {
+                            done(null, false, err);
+                        }
                     });
             }
         ));
@@ -58,7 +59,7 @@ exports.init = function (app) {
         passport.use(new FacebookStrategy({
                 clientID: '1804095099830430',
                 clientSecret: '2933107e6aa8dddd3ec9460280440da7',
-                callbackURL: 'http://localhost:3000/login/facebook/callback',
+                callbackURL: 'http://pacific.applepi.kr/login/facebook/callback',
                 profileFields: ['id', 'emails']
             },
             function (accessToken, refreshToken, profile, done) {

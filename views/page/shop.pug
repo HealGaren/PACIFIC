@@ -1,0 +1,60 @@
+extends ../parent/layout
+
+mixin center
+    div.center-outer
+        div.center-inner
+            if block
+                block
+
+block head-more
+    link(rel='stylesheet', type='text/css', href='/stylesheets/page/shop.css')
+    script(src='/javascripts/page/shop.js')
+
+block content
+    div#html-wrap
+        div#left-menu.menu(style='display:none;')
+            div#goto-home.btn
+                img(src='/images/shop/undo_button.png')
+                span Main
+
+            div#money-bar
+                span 10000 pearl
+
+        div#right-menu.menu(style='display:none;')
+            div#categories
+                div.category.btn
+                    span 감정표현
+                div.category.btn#btn-category-skin
+                    span 스킨
+                    img(src='/images/shop/lock_icon.png')
+
+        div#content-wrap(style='display:none;')
+            +center
+                div#items
+                    div.item.btn#angry
+                        div.top
+                            +center
+                                span angry
+                        div.wrap-img
+                        div.bottom
+                            span.price 100
+                            br
+                            span.price-end pearl
+                    div.item.btn#smile
+                        div.top
+                            +center
+                                span smile
+                        div.wrap-img
+                        div.bottom
+                            span.price 100
+                            br
+                            span.price-end pearl
+                    div.item.btn#dead
+                        div.top
+                            +center
+                                span dead
+                        div.wrap-img
+                        div.bottom 
+                            span.price 100
+                            br
+                            span.price-end pearl

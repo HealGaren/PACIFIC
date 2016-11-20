@@ -1,10 +1,9 @@
+//noinspection CssUnknownTarget
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
+//noinspection CssUnknownTarget
 @import url('https://fonts.googleapis.com/css?family=Exo:600');
 
-body {
-  background: url("../../images/login/background.png") no-repeat;
-  background-size: 100% auto;
-}
+
 
 .placeholder(@rules) {
   &::-webkit-input-placeholder {
@@ -24,7 +23,6 @@ body {
   }
 }
 
-@input-height: 45px;
 
 #html-wrap {
   width: 900px;
@@ -46,38 +44,63 @@ body {
       margin: auto;
       width: 50%;
 
-      .input-round {
-        border: 2px solid black;
-        border-radius: @input-height / 2;
-        height: @input-height;
-        width: 100%;
-        background-color: rgba(255, 255, 255, 0.7);
 
-        margin: 10px auto auto;
+      .input-wrap-box {
+        position:relative;
+        width:100%;
+        height: 50px;
+
+
+        margin: 20px auto auto;
 
         &:nth-child(1) {
           margin-top: 0;
         }
 
-        input {
-          font-family: Roboto, sans-serif;
-          width: 93%;
-          background: transparent;
-          border: none;
-          font-size: 20px;
-          &:focus {
-            outline: none;
-          }
-          .placeholder({ color: rgba(0, 0, 0, 0.6) });
+
+        .input-round {
+          //border: 2px solid black;
+          position:absolute;
+          box-sizing: border-box;
+          top:0;
+          left:0;
+          right:0;
+          bottom:0;
+
+          @border-scale: 0.8;
+
+          //noinspection CssInvalidPropertyValue
+          border: 21px*@border-scale solid transparent;
+          border-right-width: 49px*@border-scale;
+          border-left-width: 49px*@border-scale;
+
+          border-image: url("../../images/login/login_bar.png") 21 49 21 49 fill repeat;
+          //background-color: rgba(255, 255, 255, 0.7);
+
         }
 
+
+        .input-center {
+          position:relative;
+          input {
+            font-family: Roboto, sans-serif;
+            width: 90%;
+            background: transparent;
+            border: none;
+            font-size: 20px;
+            &:focus {
+              outline: none;
+            }
+            color: white;
+            .placeholder({ color: rgba(255, 255, 255, 0.4) });
+          }
+        }
       }
 
       #login-button {
 
         margin-top: 30px;
         float: right;
-        cursor: pointer;
       }
 
       &:after {
@@ -87,6 +110,8 @@ body {
       }
     }
     .divider {
+      margin-top:30px;
+      margin-bottom:50px;
       width: 100%;
       text-align: center;
       font-family: Exo, sans-serif;
@@ -111,9 +136,11 @@ body {
         display:block;
         width:40%;
         margin: 15px auto auto;
-        cursor:pointer;
-
       }
     }
+  }
+
+  #bottom-space {
+    height:30px;
   }
 }

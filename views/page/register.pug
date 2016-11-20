@@ -1,0 +1,35 @@
+extends ../parent/layout
+
+mixin center
+    div.center-outer.input-center
+        div.center-inner
+            if block
+                block
+
+mixin input-box
+    div.input-wrap-box
+        +center
+            if block
+                block
+
+block head-more
+    link(rel='stylesheet', type='text/css', href='/stylesheets/page/register.css')
+    script(src='/javascripts/page/register.js')
+
+block content
+    div#html-wrap
+        img#title(src='/images/register/signup_title.png' style='display:none;')
+
+        div#register-wrap(style='display:none;')
+            form#register-form
+                +input-box
+                    input(type="text" name="nickname" placeholder="Nickname" autocomplete="off" required)
+                +input-box
+                    input(type="email" name="email" placeholder="E-mail" autocomplete="off" required)
+                +input-box
+                    input(type="password" name="password" placeholder="Pw" autocomplete="off" required)
+                +input-box
+                    input(type="password" name="password2" placeholder="reconfirm" autocomplete="off" required )
+                input(type="submit" style="display:none;")
+                img#register-button.btn(src="/images/register/ok_button.png")
+        div#bottom-space

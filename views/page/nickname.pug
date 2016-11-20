@@ -1,0 +1,29 @@
+extends ../parent/layout
+
+mixin center
+    div.center-outer.input-center
+        div.center-inner
+            if block
+                block
+
+mixin input-box
+    div.input-wrap-box
+        +center
+            if block
+                block
+
+block head-more
+    link(rel='stylesheet', type='text/css', href='/stylesheets/page/nickname.css')
+    script(src='/javascripts/page/nickname.js')
+
+block content
+    div#html-wrap
+        img#title(src='/images/register/signup_title.png' style='display:none;')
+
+        div#nickname-wrap(style='display:none;')
+            form#nickname-form
+                +input-box
+                    input(type="text" name="nickname" placeholder="Nickname" autocomplete="off" required)
+                input(type="submit" style="display:none;")
+                img#register-button.btn(src="/images/register/ok_button.png")
+        div#bottom-space

@@ -3,9 +3,13 @@
  */
 
 function MyError(msg, code){
-    Error.call(this, msg);
+    Error.call(this);
+    Error.captureStackTrace(this, arguments.callee);
+    this.message = msg;
     this.statusCode = code;
 }
 
 MyError.prototype = Object.create(Error.prototype);
 MyError.prototype.constructor = MyError;
+
+module.exports = MyError;
