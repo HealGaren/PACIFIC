@@ -64,6 +64,7 @@ html, body {
         width: 81px;
         height: 81px;
         border-radius: 40px;
+        background-size:contain;
       }
 
       #player-log {
@@ -109,7 +110,7 @@ html, body {
       @search-bar-scale: @target-width / 292px;
 
       @search-bar-height: 43px * @search-bar-scale;
-
+      @category-height: 40;
       @bottom-bar-height: 40px;
 
       #search-bar {
@@ -135,6 +136,19 @@ html, body {
 
           .nano-content {
             margin: auto;
+
+            .friend-category {
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+
+              border-top: 2px solid rgba(255, 255, 255, 0.3);
+              width: 90%;
+              margin: auto;
+              padding-top: 15px;
+              height: @category-height;
+            }
+
             .friend {
 
               -webkit-box-sizing: border-box;
@@ -142,13 +156,18 @@ html, body {
               box-sizing: border-box;
 
               height: 50px + 20px;
-              width: 100%;
-              padding: 10px 10px;
-              border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+              width: 90%;
+              padding: 10px 0px;
+              margin:auto;
+              border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
               & > * {
                 display: inline-block;
                 float: left;
+              }
+
+              &.last-list{
+                border-bottom: none;
               }
 
               .friend-icon {
@@ -157,7 +176,7 @@ html, body {
                 margin-top: 5px;
                 width: 40px;
                 border-radius: 25px;
-                background-image: url('../../images/index/friendlist.png');
+                background-size:contain;
               }
 
               .friend-info {

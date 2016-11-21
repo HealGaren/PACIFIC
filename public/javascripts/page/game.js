@@ -81,9 +81,7 @@ $(window).ready(()=> {
 
     function onSocketConnect() {
         socket.emit('connect again', function (info) {
-            if (info.player.user.facebookExist) {
-                $('#player-image').css('background', `url('http://graph.facebook.com/${info.player.user.facebookID}/picture?type=normal')`);
-            }
+            $('#player-image').css('background', `url('http://graph.facebook.com/${info.player.user.facebookID}/picture?type=normal')`);
             $('#player-name').text(info.player.user.nickname);
 
             $('#win-number').text(info.player.user.win);
@@ -92,9 +90,7 @@ $(window).ready(()=> {
             if (isNaN(winLose)) winLose = 0;
             $('#win-percent').text(Math.round(winLose) + '%');
 
-            if (info.other.user.facebookExist) {
-                $('#other-player-image').css('background', `url('http://graph.facebook.com/${info.other.user.facebookID}/picture?type=normal')`);
-            }
+            $('#other-player-image').css('background', `url('http://graph.facebook.com/${info.other.user.facebookID}/picture?type=normal')`);
             $('#other-player-name').text(info.other.user.nickname);
             $('#other-win-number').text(info.other.user.win);
             $('#other-lose-number').text(info.other.user.lose);
@@ -124,7 +120,7 @@ $(window).ready(()=> {
             socket.on('message', onMessage);
 
 
-            if(info.player.user.isHaveDead) {
+            if (info.player.user.isHaveDead) {
                 $('#dead-icon').click(function () {
                     if (!isMyMessageShow) socket.emit('message', 'dead');
                 });
@@ -132,7 +128,7 @@ $(window).ready(()=> {
             else {
                 $('#dead-icon').addClass('non-bought');
             }
-            if(info.player.user.isHaveSmile) {
+            if (info.player.user.isHaveSmile) {
                 $('#smile-icon').click(function () {
                     if (!isMyMessageShow) socket.emit('message', 'smile');
                 });
@@ -141,7 +137,7 @@ $(window).ready(()=> {
             else {
                 $('#smile-icon').addClass('non-bought');
             }
-            if(info.player.user.isHaveAngry) {
+            if (info.player.user.isHaveAngry) {
                 $('#angry-icon').click(function () {
                     if (!isMyMessageShow) socket.emit('message', 'angry');
                 });
@@ -370,7 +366,7 @@ $(window).ready(()=> {
                     .css('background-size', 'contain');
 
                 $('#result-scores .score-num').text('' + money);
-                $('#get-scores .score-num').text(isWin?'10':'-10');
+                $('#get-scores .score-num').text(isWin ? '10' : '-10');
                 $('#bonus-scores .score-num').text('0');
                 $('#done-button').click(function () {
                     window.location.href = '/';
@@ -456,10 +452,10 @@ $(window).ready(()=> {
 
                     $unit.css({left: (100 - thisWidth) / 2});
 
-                    var objPosY = (unit[1] == BLUE)? 0:2;
-                    if(color != unit[1]) objPosY++;
+                    var objPosY = (unit[1] == BLUE) ? 0 : 2;
+                    if (color != unit[1]) objPosY++;
 
-                    $unit.css({'background-position-y':-objPosY * thisHeight});
+                    $unit.css({'background-position-y': -objPosY * thisHeight});
                     if (unit[1] == color) $unit.addClass('mine');
                 }
             }
@@ -471,12 +467,12 @@ $(window).ready(()=> {
     var isAnimPause = false;
     var animFrame = 0;
 
-    function animLoop(){
-        if(isAnimPause) return;
+    function animLoop() {
+        if (isAnimPause) return;
 
         var myFrame = 0;
 
-        switch(animFrame){
+        switch (animFrame) {
             case 0:
             case 1:
             case 2:
@@ -487,7 +483,7 @@ $(window).ready(()=> {
                 break;
         }
 
-        $('.unit').each(function(){
+        $('.unit').each(function () {
             var $this = $(this);
 
 
@@ -501,7 +497,7 @@ $(window).ready(()=> {
         });
 
         animFrame++;
-        if(animFrame >= 4) animFrame -= 4;
+        if (animFrame >= 4) animFrame -= 4;
     }
 
     function onGameEnd() {
@@ -534,7 +530,7 @@ $(window).ready(()=> {
                     return false;
                 }
                 else {
-                    if(from.x + 1 != to.x && from.x - 1 != to.x) return false;
+                    if (from.x + 1 != to.x && from.x - 1 != to.x) return false;
                     var deltaY = to.y - from.y;
                     if (unit[1] != RED) deltaY *= -1;
 

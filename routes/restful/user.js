@@ -60,4 +60,42 @@ router.post('/nickname', permission.needLogin, middleware.parseParam.body([
         });
 });
 
+router.post('/add-friend', permission.needLogin, middleware.parseParam.body([
+    ['id', 'string', true],
+]), (req, res)=> {
+    mongo.User.inviteFriend(req.user._id, req.body.id)
+        .then(()=>{
+            res.send("성공적으로 친구 추가가 요청되었습니다.");
+        })
+        .catch(err=>{
+            res.status(err.statusCode).send(err.message);
+        });
+});
+
+router.post('/accept-friend', permission.needLogin, middleware.parseParam.body([
+    ['id', 'string', true],
+]), (req, res)=> {
+    mongo.User.acceptFriend(req.user._id, req.body.id)
+        .then(()=>{
+            res.send("성공적으로 친구 추가를 수락했습니다.");
+        })
+        .catch(err=>{
+            console.log(err);
+            res.status(err.statusCode).send(err.message);
+        });
+});
+
+
+router.post('/deny-friend', permission.needLogin, middleware.parseParam.body([
+    ['id', 'string', true],
+]), (req, res)=> {
+    mongo.User.denyFriend(req.user._id, req.body.id)
+        .then(()=>{
+            res.send("성공적으로 친구 추가를 거절했습니다.");
+        })
+        .catch(err=>{
+            res.status(err.statusCode).send(err.message);
+        });
+});
+
 module.exports = router;

@@ -36,8 +36,13 @@ exports.init = function (server) {
         var mongoId = user._id;
         sockets[mongoId] = socket;
 
+        var sendUser = user.toObject();
+        sendUser.friends.forEach((p)=>{
+            p.isOnline = (sockets[p._id] != undefined);
+        });
+
         socket.emit('init', {
-            user: user.toObject()
+            user: sendUser
         });
 
         socket.on('buy', (key, ack)=>{
@@ -58,11 +63,36 @@ exports.init = function (server) {
             }
         });
 
+        socket.on('vs', (id, ack)=>{
+            mongo.User.findById(id).exec().then((other)=> {
+                sockets[id].on('vs accept', (accept, ackOther)=> {
+                    if (accept) {
+                        var room = new Room(
+                            {user: user.toObject(), ack: ack},
+                            {user: other.toObject(), ack: ackOther}
+                        );
+
+                        reconnect[user._id] = room.reconnectA;
+                        reconnect[other._id] = room.reconnectB;
+                    }
+                    else {
+
+                    }
+                    sockets[id].removeAllListeners('vs accept');
+                });
+                sockets[id].emit('vs', user.nickname);
+            });
+        });
+
         socket.on('connect again', (ack)=>{
             console.log('reconnect');
             if(reconnect[mongoId]) reconnect[mongoId](ack);
         });
 
+        socket.on('disconnect', ()=>{
+            console.log('disconnect');
+            sockets[mongoId] = undefined;
+        });
 
     });
 

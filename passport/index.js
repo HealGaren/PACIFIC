@@ -10,6 +10,7 @@
 var crypto = require('crypto');
 var mongo = require('../mongo');
 var MyError = require('../my-error');
+var sockets = require('../sio/sockets');
 
 var passport = require('passport')
     , LocalStrategy = require('passport-local').Strategy
@@ -27,7 +28,7 @@ exports.init = function (app) {
         };
 
         exports.deserializeUserFunc = function (id, done) {
-            mongo.User.findOne({_id: id}).populate('lastPlayed').exec().then(function (user) {
+            mongo.User.findOne({_id: id}).populate('lastPlayed friends invites').exec().then(function (user) {
                 done(null, user);
             }, function (err) {
                 done(err, false);

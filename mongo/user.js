@@ -39,6 +39,12 @@ var schema = new mongoose.Schema({
             ref: 'players'
         }]
     },
+    invites: {
+        type: [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'players'
+        }]
+    },
     win: {
         type: Number,
         default: 0
@@ -55,23 +61,25 @@ var schema = new mongoose.Schema({
 
     isHaveSmile: {
         type: Boolean,
-        default:false
+        default: false
     },
 
     isHaveAngry: {
         type: Boolean,
-        default:false
+        default: false
     },
 
     isHaveDead: {
         type: Boolean,
-        default:false
+        default: false
     },
 
     lastPlayed: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'players'
     }
+
+
 });
 
 /**
@@ -198,70 +206,90 @@ schema.statics.loginFacebook = function (facebookId, email) {
 schema.statics.removeUser = function (id) {
     return this.findByIdAndRemove(id).exec();
 };
+//
+// /**
+//  *
+//  * @param {ObjectId} id
+//  * @param {ObjectId} friendId
+//  * @returns {Promise}
+//  */
+// schema.statics.addFriend = function (id, friendId) {
+//     return this.findByIdAndUpdate(id, {$push: {friends: friendId}}).exec();
+// };
+//
+// /**
+//  *
+//  * @param {ObjectId} id
+//  * @param {ObjectId} friendId
+//  * @returns {Promise}
+//  */
+// schema.statics.removeFriend = function (id, friendId) {
+//     return this.findByIdAndUpdate(id, {$pull: {friends: friendId}}).exec();
+// };
 
-/**
- *
- * @param {ObjectId} id
- * @param {ObjectId} friendId
- * @returns {Promise}
- */
-schema.statics.addFriend = function (id, friendId) {
-    return this.findByIdAndUpdate(id, {$push: {friends: friendId}}).exec();
+schema.statics.inviteFriend = function (id, toId) {
+    return this.findById(toId).exec().then((user)=> {
+        if (user.invites.indexOf(id) != -1) throw new MyError("이미 보낸 친구추가입니다.", 400);
+        if (user.friends.indexOf(id) != -1) throw new MyError("이미 친구입니다.", 400);
+        return this.findByIdAndUpdate(toId, {$push: {invites: id}});
+    });
 };
 
-/**
- *
- * @param {ObjectId} id
- * @param {ObjectId} friendId
- * @returns {Promise}
- */
-schema.statics.removeFriend = function (id, friendId) {
-    return this.findByIdAndUpdate(id, {$pull: {friends: friendId}}).exec();
+
+schema.statics.acceptFriend = function (id, acceptId) {
+    return this.findByIdAndUpdate(id, {$pull: {invites: acceptId}, $push: {friends: acceptId}})
+        .then(()=>{
+            console.log('dd');
+            return this.findByIdAndUpdate(acceptId, {$push:{friends:id}});
+        });
+};
+
+schema.statics.denyFriend = function (id, acceptId) {
+    return this.findByIdAndUpdate(id, {$pull: {invites: acceptId}});
 };
 
 
 schema.statics.addWinOrLose = function (id, isWin) {
-    var key = isWin?'win':'lose';
+    var key = isWin ? 'win' : 'lose';
     var obj = {};
     obj[key] = 1;
     return this.findByIdAndUpdate(id, {
         $inc: obj
-    }).exec();
+    });
 };
 
 schema.statics.addMoney = function (id, money) {
     return this.findByIdAndUpdate(id, {
         $inc: {
-            money:money
+            money: money
         }
-    }).exec();
+    });
 };
 
-schema.statics.buy = function(id, key){
+schema.statics.buy = function (id, key) {
 
     var obj = {};
     obj[key] = true;
     return this.findByIdAndUpdate(id, {
         $set: obj,
         $inc: {
-            money:-100
+            money: -100
         }
     });
 };
 
 
-
-schema.statics.addLastPlayed = function(idA, idB){
+schema.statics.addLastPlayed = function (idA, idB) {
 
 
     return this.findByIdAndUpdate(idA, {
         $set: {
-            lastPlayed:idB
+            lastPlayed: idB
         }
-    }).then(()=>{
+    }).then(()=> {
         return this.findByIdAndUpdate(idB, {
             $set: {
-                lastPlayed:idA
+                lastPlayed: idA
             }
         });
     });
