@@ -174,25 +174,35 @@ class Room {
         });
     }
 
+
     checkEnd(data, func) {
 
+        var endCount = 0;
+
         if (data.gameEnd) {
-            this.players.forEach(p=> {
-                p.socket.removeAllListeners();
-                var isWin = false;
-                var money = -10;
-                if ((this.turn - 1) % 2 == p.color) {
-                    isWin = true;
-                    money = 10;
-                }
-                mongo.User.addWinOrLose(p.id, isWin)
-                    .then(user=> {
-                        return mongo.User.addMoney(p.id, money);
-                    })
-                    .then(user=> {
-                        func();
-                    });
+
+            mongo.User.addLastPlayed(this.players[0].id, this.players[1].id).then(()=> {
+
+                this.players.forEach(p=> {
+                    p.socket.removeAllListeners();
+                    var isWin = false;
+                    var money = -10;
+                    if ((this.turn - 1) % 2 == p.color) {
+                        isWin = true;
+                        money = 10;
+                    }
+                    mongo.User.addWinOrLose(p.id, isWin)
+                        .then(user=> {
+                            return mongo.User.addMoney(p.id, money);
+                        })
+                        .then(user=> {
+                            endCount++;
+                            if (endCount >= 2) func();
+                        });
+                });
+
             });
+
         }
         else func();
 
@@ -200,7 +210,7 @@ class Room {
 
     bindGameToSocket(player) {
 
-        player.socket.on('message', (type)=>{
+        player.socket.on('message', (type)=> {
             this.players.forEach(p=> {
                 p.socket.emit('message', type, player.color);
             });
@@ -332,7 +342,7 @@ class Room {
                     return false;
                 }
                 else {
-                    if(from.x + 1 != to.x && from.x - 1 != to.x) return false;
+                    if (from.x + 1 != to.x && from.x - 1 != to.x) return false;
                     var deltaY = to.y - from.y;
                     if (unit[1] != RED) deltaY *= -1;
 

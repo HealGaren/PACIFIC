@@ -27,7 +27,7 @@ exports.init = function (app) {
         };
 
         exports.deserializeUserFunc = function (id, done) {
-            mongo.User.findOne({_id: id}).exec().then(function (user) {
+            mongo.User.findOne({_id: id}).populate('lastPlayed').exec().then(function (user) {
                 done(null, user);
             }, function (err) {
                 done(err, false);

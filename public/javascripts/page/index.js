@@ -2,6 +2,9 @@
  * Created by 최예찬 on 2016-11-03.
  */
 
+var LAST_PLAYER = 1;
+var NORMAL_FRIEND = 2;
+var INVITE_FRIEND = 3;
 
 $(window).ready(()=>{
     //noinspection all
@@ -69,6 +72,52 @@ $(window).ready(()=>{
         $('#win-percent').text(Math.round(winLose) + '%');
 
         $('#money-bar').find('span').text(data.user.money + ' pearl');
+
+        $('#friend-list').find('> .nano-content')
+            .append(makeFriendDiv(data.user.lastPlayed, LAST_PLAYER));
+    }
+
+    function makeFriendDiv(player, type){
+
+        var winLose  = (player.win / (player.win + player.lose)) * 100;
+        if(isNaN(winLose)) winLose = 0;
+
+        var str = '<div class="friend">'+
+                    `<div class="friend-icon" style="background:url('http://graph.facebook.com/${player.facebookID}/picture?type=normal')"></div>` +
+                    '<div class="friend-info">' +
+                        '<div class="friend-name">' +
+                            '<span>' + player.nickname + '</span>' +
+                        '</div>' +
+                        '<div class="friend-log">' +
+                            '<span class="f-win-number">' + player.win + '</span>' +
+                            '<span class="red">W&nbsp;</span>' +
+                            '<span class="f-lose-number">' + player.lose + '</span>' +
+                            '<span class="blue">L&nbsp;</span>' +
+                            '<span class="f-win-percent">' + winLose + '%</span>' +
+                        '</div>' +
+                    '</div>' +
+                    '<div class="friend-btns">';
+
+        switch(type) {
+            case LAST_PLAYER:
+                str = str +
+                    '<div class="btn add-friend"></div>';
+                break;
+            case NORMAL_FRIEND:
+                str = str +
+                    '<div class="btn battle-friend"></div>';
+                break;
+            case INVITE_FRIEND:
+                str = str +
+                    '<div class="btn accept-friend"></div>' +
+                    '<div class="btn deny-friend"></div>';
+                break;
+        }
+        str = str +
+                '</div>' +
+            '</div>';
+
+        return str;
     }
 
     function onMatchReady(){
@@ -80,5 +129,7 @@ $(window).ready(()=>{
             });
         }, 1000);
     }
+
+
 
 });

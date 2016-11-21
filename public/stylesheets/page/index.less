@@ -3,8 +3,6 @@
 //noinspection CssUnknownTarget
 @import url('https://fonts.googleapis.com/css?family=Exo:600');
 
-
-
 .placeholder(@rules) {
   &::-webkit-input-placeholder {
     @rules();
@@ -23,200 +21,313 @@
   }
 }
 
-html, body{
-  height:100%;
+html, body {
+  height: 100%;
 }
 
 #html-wrap {
   width: 100%;
-  height:100%;
+  height: 100%;
   color: white;
-  position:relative;
+  position: relative;
 
-  .menu{
-    display:inline-block;
-    position:absolute;
-    top:30px;
-    bottom:30px;
+  .menu {
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
     z-index: 1;
 
   }
 
   .menu > * {
-    position:absolute;
+    position: absolute;
   }
 
-  #left-menu{
+  #left-menu {
     @left-width: 315px;
 
     width: @left-width;
-    left:30px;
+    left: 30px;
 
     #player-bar {
-      @player-bar-scale:@left-width / 435px;
-      width:435px * @player-bar-scale;
-      height:145px * @player-bar-scale;
-      background:url('../../images/index/player_bar.png');
+      @player-bar-scale: @left-width / 435px;
+      width: 435px * @player-bar-scale;
+      height: 145px * @player-bar-scale;
+      background: url('../../images/index/player_bar.png');
       background-size: cover;
 
-
       #player-image {
-        position:absolute;
-        left:12px;
-        top:12px;
-        width:81px;
-        height:81px;
-        border-radius:40px;
+        position: absolute;
+        left: 12px;
+        top: 12px;
+        width: 81px;
+        height: 81px;
+        border-radius: 40px;
       }
 
       #player-log {
-        position:absolute;
-        font-size:12px;
-        left:103px;
-        top:12px;
-        color:#555;
+        position: absolute;
+        font-size: 12px;
+        left: 103px;
+        top: 12px;
+        color: #555;
       }
 
       #player-name {
-        position:absolute;
-        font-size:20px;
-        right:0;
-        width:230px;
+        position: absolute;
+        font-size: 20px;
+        right: 0;
+        width: 230px;
         text-align: center;
-        bottom:25px;
-        color:#222;
+        bottom: 25px;
+        color: #222;
       }
     }
 
-    #friend-list-wrap{
-      top:135px;
-      bottom:100px;
-      width:@left-width * 0.9;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
+    #friend-list-wrap {
+      top: 135px;
+      bottom: 100px;
+      width: @left-width * 0.9;
 
-      border: 20px solid transparent;
-      border-image:url('../../images/index/friendlist.png') 20 fill repeat;
+      #friend-list-background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
 
-      @target-width:@left-width * 0.9 * 0.8;
-      @search-bar-scale:@target-width / 292px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
 
-      @search-bar-height:43px * @search-bar-scale;
+        border: 20px solid transparent;
+        border-image: url('../../images/index/friendlist.png') 20 fill repeat;
 
-      #search-bar {
-        width:292px * @search-bar-scale;
-        height:@search-bar-height;
-        background:url('../../images/index/search_bar.png');
-        background-size: cover;
-        margin:30px auto 0;
       }
 
-      #friend-list {
-        //noinspection CssInvalidPropertyValue
-        height:calc(~"100% - " @search-bar-height);
+      @target-width: @left-width * 0.9 * 0.85;
+      @search-bar-scale: @target-width / 292px;
 
+      @search-bar-height: 43px * @search-bar-scale;
 
-        .nano-content {
-          margin:auto;
-          width:90%;
-          div {
-            height:400px;
+      @bottom-bar-height: 40px;
+
+      #search-bar {
+        position: relative;
+        width: 292px * @search-bar-scale;
+        height: @search-bar-height;
+        background: url('../../images/index/search_bar.png');
+        background-size: cover;
+        margin: 30px auto 0;
+      }
+
+      #friend-scroll-wrap {
+        width: 100%;
+        height: ~"calc(100% - "@search-bar-height + 15px * 2 + 15px + @bottom-bar-height~")";
+
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        padding: 20px;
+
+        #friend-list {
+
+          .nano-content {
+            margin: auto;
+            .friend {
+
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+
+              height: 50px + 20px;
+              width: 100%;
+              padding: 10px 10px;
+              border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+
+              & > * {
+                display: inline-block;
+                float: left;
+              }
+
+              .friend-icon {
+
+                height: 80%;
+                margin-top: 5px;
+                width: 40px;
+                border-radius: 25px;
+                background-image: url('../../images/index/friendlist.png');
+              }
+
+              .friend-info {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+
+                width: ~"calc(100% - 100px)";
+                padding-left: 10px;
+                padding-top: 10px;
+
+                .friend-name {
+                  width: 100%;
+                  overflow-x: hidden;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  font-size: 14px;
+                }
+
+                .friend-log {
+                  font-size: 8px;
+                }
+              }
+
+              .friend-btns {
+                float: right;
+                margin-top: 20px;
+                * {
+                  display:inline-block;
+                  width: 35px * 0.7;
+                  height: 22px * 0.7;
+                  margin-left: 4px;
+                  float: left;
+                  background-size:cover;
+
+                  &:nth-child(1) {
+                    margin-left: 0;
+                  }
+                }
+
+                .battle-friend {
+                  background-image:url('../../images/index/vs_icon.png');
+                }
+                .add-friend {
+                  background-image:url('../../images/index/add_friend_icon.png');
+                }
+                .accept-friend{
+                  background-image:url('../../images/index/check_icon.png');
+                }
+                .deny-friend{
+                  background-image:url('../../images/index/refusal_icon.png');
+                }
+              }
+
+            }
           }
+
+        }
+      }
+
+      #friend-bottom {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        border-top: 2px solid rgba(255, 255, 255, 0.3);
+        width: 90%;
+        margin: auto;
+        padding-top: 15px;
+        height: @bottom-bar-height;
+
+        #friend-bottom-desc {
+
+        }
+
+        #friend-bottom-num {
+          float: right;
         }
 
       }
 
     }
 
-    #friend-icon{
-      bottom:0;
+    #friend-icon {
+      bottom: 0;
     }
 
   }
 
-  #right-menu{
+  #right-menu {
     @right-width: 200px;
 
     width: @right-width;
-    right:30px;
+    right: 30px;
 
     #money-bar {
-      @player-bar-scale:@right-width / 250px;
-      width:250px * @player-bar-scale;
-      height:57px * @player-bar-scale;
-      background:url('../../images/index/money_bar.png');
+      @player-bar-scale: @right-width / 250px;
+      width: 250px * @player-bar-scale;
+      height: 57px * @player-bar-scale;
+      background: url('../../images/index/money_bar.png');
       background-size: cover;
       text-align: center;
 
       span {
-        line-height:57px * @player-bar-scale;
+        line-height: 57px * @player-bar-scale;
       }
     }
 
     #button-list {
-      bottom:0;
-      right:0;
+      bottom: 0;
+      right: 0;
 
       * {
         vertical-align: middle;
       }
 
-      #shop-icon{
-        margin-right:15px;
+      #shop-icon {
+        margin-right: 15px;
       }
 
       #rank-icon {
-        margin-right:15px;
+        margin-right: 15px;
       }
     }
 
   }
 
-
   #content-wrap {
     z-index: 0;
-    width:700px;
-    height:100%;
-    margin:auto;
+    width: 700px;
+    height: 100%;
+    margin: auto;
     text-align: center;
 
-    #jinjoo{
-      height:300px;
-      width:300px;
-      margin:100px auto 0;
-      background:url('../../images/jinjoo/pearl.png');
-      background-size:cover;
-      color:black;
+    #jinjoo {
+      height: 300px;
+      width: 300px;
+      margin: 100px auto 0;
+      background: url('../../images/jinjoo/pearl.png');
+      background-size: cover;
+      color: black;
     }
 
-    #matching-bar{
-      margin:100px auto 0;
-      @bar-size:0.9;
+    #matching-bar {
+      margin: 100px auto 0;
+      @bar-size: 0.9;
 
-      width:426px * @bar-size;
-      height:46px * @bar-size;
-      background:url('../../images/index/bar.png');
-      background-size:cover;
-      color:black;
+      width: 426px * @bar-size;
+      height: 46px * @bar-size;
+      background: url('../../images/index/bar.png');
+      background-size: cover;
+      color: black;
 
       span {
-        line-height:46px * @bar-size * 0.85;
+        line-height: 46px * @bar-size * 0.85;
       }
 
     }
 
-    #matching-percent-string{
-      margin-top:20px;
+    #matching-percent-string {
+      margin-top: 20px;
     }
 
-    #space{
-      height:30px;
+    #space {
+      height: 30px;
     }
 
   }
 
   #bottom-space {
-    height:30px;
+    height: 30px;
   }
 }

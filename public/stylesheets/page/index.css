@@ -58,6 +58,12 @@ body {
   top: 135px;
   bottom: 100px;
   width: 283.5px;
+}
+#html-wrap #left-menu #friend-list-wrap #friend-list-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -65,21 +71,101 @@ body {
   border-image: url('../../images/index/friendlist.png') 20 fill repeat;
 }
 #html-wrap #left-menu #friend-list-wrap #search-bar {
-  width: 226.8px;
-  height: 33.39863014px;
+  position: relative;
+  width: 240.975px;
+  height: 35.48604452px;
   background: url('../../images/index/search_bar.png');
   background-size: cover;
   margin: 30px auto 0;
 }
-#html-wrap #left-menu #friend-list-wrap #friend-list {
-  height: calc(100% - );
+#html-wrap #left-menu #friend-list-wrap #friend-scroll-wrap {
+  width: 100%;
+  height: calc(100% -  120.48604452px );
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px;
 }
-#html-wrap #left-menu #friend-list-wrap #friend-list .nano-content {
+#html-wrap #left-menu #friend-list-wrap #friend-scroll-wrap #friend-list .nano-content {
   margin: auto;
-  width: 90%;
 }
-#html-wrap #left-menu #friend-list-wrap #friend-list .nano-content div {
-  height: 400px;
+#html-wrap #left-menu #friend-list-wrap #friend-scroll-wrap #friend-list .nano-content .friend {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 70px;
+  width: 100%;
+  padding: 10px 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+#html-wrap #left-menu #friend-list-wrap #friend-scroll-wrap #friend-list .nano-content .friend > * {
+  display: inline-block;
+  float: left;
+}
+#html-wrap #left-menu #friend-list-wrap #friend-scroll-wrap #friend-list .nano-content .friend .friend-icon {
+  height: 80%;
+  margin-top: 5px;
+  width: 40px;
+  border-radius: 25px;
+  background-image: url('../../images/index/friendlist.png');
+}
+#html-wrap #left-menu #friend-list-wrap #friend-scroll-wrap #friend-list .nano-content .friend .friend-info {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: calc(100% - 100px);
+  padding-left: 10px;
+  padding-top: 10px;
+}
+#html-wrap #left-menu #friend-list-wrap #friend-scroll-wrap #friend-list .nano-content .friend .friend-info .friend-name {
+  width: 100%;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
+}
+#html-wrap #left-menu #friend-list-wrap #friend-scroll-wrap #friend-list .nano-content .friend .friend-info .friend-log {
+  font-size: 8px;
+}
+#html-wrap #left-menu #friend-list-wrap #friend-scroll-wrap #friend-list .nano-content .friend .friend-btns {
+  float: right;
+  margin-top: 20px;
+}
+#html-wrap #left-menu #friend-list-wrap #friend-scroll-wrap #friend-list .nano-content .friend .friend-btns * {
+  display: inline-block;
+  width: 24.5px;
+  height: 15.4px;
+  margin-left: 4px;
+  float: left;
+  background-size: cover;
+}
+#html-wrap #left-menu #friend-list-wrap #friend-scroll-wrap #friend-list .nano-content .friend .friend-btns *:nth-child(1) {
+  margin-left: 0;
+}
+#html-wrap #left-menu #friend-list-wrap #friend-scroll-wrap #friend-list .nano-content .friend .friend-btns .battle-friend {
+  background-image: url('../../images/index/vs_icon.png');
+}
+#html-wrap #left-menu #friend-list-wrap #friend-scroll-wrap #friend-list .nano-content .friend .friend-btns .add-friend {
+  background-image: url('../../images/index/add_friend_icon.png');
+}
+#html-wrap #left-menu #friend-list-wrap #friend-scroll-wrap #friend-list .nano-content .friend .friend-btns .accept-friend {
+  background-image: url('../../images/index/check_icon.png');
+}
+#html-wrap #left-menu #friend-list-wrap #friend-scroll-wrap #friend-list .nano-content .friend .friend-btns .deny-friend {
+  background-image: url('../../images/index/refusal_icon.png');
+}
+#html-wrap #left-menu #friend-list-wrap #friend-bottom {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  width: 90%;
+  margin: auto;
+  padding-top: 15px;
+  height: 40px;
+}
+#html-wrap #left-menu #friend-list-wrap #friend-bottom #friend-bottom-num {
+  float: right;
 }
 #html-wrap #left-menu #friend-icon {
   bottom: 0;

@@ -37,6 +37,9 @@ body {
 .red {
   color: darkred;
 }
+.real-red {
+  color: red;
+}
 .blue {
   color: darkblue;
 }

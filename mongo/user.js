@@ -67,6 +67,11 @@ var schema = new mongoose.Schema({
         type: Boolean,
         default:false
     },
+
+    lastPlayed: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'players'
+    }
 });
 
 /**
@@ -241,6 +246,24 @@ schema.statics.buy = function(id, key){
         $inc: {
             money:-100
         }
+    });
+};
+
+
+
+schema.statics.addLastPlayed = function(idA, idB){
+
+
+    return this.findByIdAndUpdate(idA, {
+        $set: {
+            lastPlayed:idB
+        }
+    }).then(()=>{
+        return this.findByIdAndUpdate(idB, {
+            $set: {
+                lastPlayed:idA
+            }
+        });
     });
 };
 
