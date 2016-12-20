@@ -209,8 +209,7 @@ class Room {
     }
 
     bindGameToSocket(player) {
-
-        player.socket.on('message', (type)=> {
+        if(player.socket) player.socket.on('message', (type)=> {
             this.players.forEach(p=> {
                 p.socket.emit('message', type, player.color);
             });

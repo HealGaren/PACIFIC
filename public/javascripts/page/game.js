@@ -338,13 +338,27 @@ $(window).ready(()=> {
                             if (color == BLUE) colorStr = 'red';
                             else colorStr = 'blue';
                         }
+
                         var unitFileEnd = `/${colorStr}_${!currentMine ? 'back' : 'front'}.png`;
                         var unitFile = unitImagePrefix + unitName + unitFileEnd;
 
-                        var $unit = $(`<img class='unit ${unitName}' src="${unitFile}" style="display:none;">`);
+
+
+                        var $unit = $(`<div class='unit ${unitName}'">`);
+
                         $myCell.append($unit);
-                        $unit.css({width: unitSize[type][0] * 0.7, height: unitSize[type][1] * 0.7});
-                        $unit.css({left: (100 - $unit.width()) / 2});
+
+                        // $unit.css({width: unitSize[unit[0]][0] * 0.7, height: unitSize[unit[0]][1] * 0.7});
+                        var thisWidth = $unit.width();
+                        var thisHeight = $unit.height();
+
+                        $unit.css({left: (100 - thisWidth) / 2});
+
+                        var objPosY = (colorStr == "blue") ? 0 : 2;
+                        if (!currentMine) objPosY++;
+
+                        $unit.css({'background-position-y': -objPosY * thisHeight});
+
                         if (!currentMine) $unit.addClass('mine');
 
                         $unit.fadeIn(500, function () {
