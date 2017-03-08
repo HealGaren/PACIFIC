@@ -40,6 +40,7 @@ app.use(function(req, res, next) {
   next(err);
 });
 
+require('randomestring');
 // error handlers
 
 // development error handler
